@@ -23,7 +23,7 @@
 <a id="url权限控制介绍" class="anchor" href="#url%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E4%BB%8B%E7%BB%8D" aria-hidden="true"><span class="octicon octicon-link"></span></a>URL权限控制介绍</h3>
 
 <p>url权限控制，其实就是通过URL来作为权限匹配时的标准。这样能够消除名称和权限对应的不决定性，而且更加容易理解。<br>
-提出解决方案后，实现了urlcheck这个项目，从其中提取出urlcheck1.0.0-beta.jar这个核心包，方便使用这来加入到自己的权限模块中。<br>
+提出解决方案后，实现了urlcheck这个项目，从其中提取出mgang-urlcheck1.1.4-beta.jar这个核心包，方便使用这来加入到自己的权限模块中。<br>
 因为界面和功能，可能根据自己公司的实际情况无法完成高度的抽象，所以这部分是无法提取的。不过在实现的urlcheck项目中是有提供界面的，
 使用者，可以用来借鉴。<br></p>
 
@@ -31,23 +31,25 @@
 <a id="规定url传入格式及使用方式" class="anchor" href="#%E8%A7%84%E5%AE%9Aurl%E4%BC%A0%E5%85%A5%E6%A0%BC%E5%BC%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>规定URL传入格式及使用方式</h3>
 
 <pre>
-&lt;c:if test="${mg:check(loginUser,'function.do?action=toUpdateFunctionUI&amp;funId') }"&gt;
+&lt;c:if test="${mg:check(loginUser,'function.do?toUpdateFunctionUI&amp;funId') }"&gt;
 &lt;a title="修改权限" href="${pageContext.request.contextPath}/function.do?action=toUpdateFunctionUI&amp;funId=${fun.funId}"
     onclick="return confirm('您真的要修改该权限吗？')"&gt;&lt;i class="cus-lock_edit"&gt;&lt;/i&gt;
 </pre>
 
 <pre>
 使用jsp自定义函数来调用java函数完成权限匹配，规定传入URL格式：
-如：请求资源.后缀?action=参数1&amp;参数2&amp;参数3
-eg:function.do?action=toUpdateFunctionUI&amp;funId
+如：请求资源.后缀?参数1&amp;参数2&amp;参数3
+eg:function.do?toUpdateFunctionUI&amp;funId
 ***jsp中使用自定义函数加el表达式的例子：
-${mg:check(loginUser,'function.do?action=toUpdateFunctionUI&amp;funId') }
+${mg:check(loginUser,'function.do?toUpdateFunctionUI&amp;funId') }
 </pre>
 
 <h3>
 <a id="现状" class="anchor" href="#%E7%8E%B0%E7%8A%B6" aria-hidden="true"><span class="octicon octicon-link"></span></a>现状</h3>
 
-<p>1.提取urlcheck的url框架内容，还没能很好的完善，之后，后建立一个项目来做调试在更新。</p>
+<p>1.提取urlcheck的url框架内容，还没能很好的完善，之后，后建立一个项目来做调试在更新。
+2.2015-05-31已经将url权限匹配核心代码封装成jar包，该项目发布在<a href="http://mg0324.github.io/urlcheckjar/">http://mg0324.github.io/urlcheckjar/</a>
+3.声明，这个urlcheck只是使用urlcheck.jar,也就是使用url权限匹配框架来完成的一个demo,有参考价值。</p>
 
 <h3>
 <a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span class="octicon octicon-link"></span></a>about me</h3>
