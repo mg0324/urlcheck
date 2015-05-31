@@ -22,10 +22,10 @@
 		    	<c:forEach items="${page.list }" var="role">
 		    		<tr>
 		    			<td>
-				    		<c:if test="${mg:check(loginUser,'role.do?action=toChangeRoleUI&roleId') }">
+				    		<c:if test="${mg:check(loginUser,'role.do?toChangeRoleUI&roleId') }">
 				    			<a title="变更角色" href="${pageContext.request.contextPath}/role.do?action=toChangeRoleUI&roleId=${role.roleId}" onclick="return confirm('您真的要修改该角色吗？')"><i class="cus-group_edit"></i></a>
 				    		</c:if>
-			    			<c:if test="${mg:check(loginUser,'role.do?action=deleteRole&roleId') }">
+			    			<c:if test="${mg:check(loginUser,'role.do?deleteRole&roleId') }">
 			    				<a title="删除角色" href="${pageContext.request.contextPath}/role.do?action=deleteRole&roleId=${role.roleId}" onclick="return confirm('您真的要删除该角色吗？');"><i class="cus-group_delete"></i></a>
 			    			</c:if>
 			    		</td>

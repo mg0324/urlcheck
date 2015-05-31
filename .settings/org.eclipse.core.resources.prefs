@@ -1,6 +1,6 @@
 eclipse.preferences.version=1
 encoding//WebContent/bclient/public/top.jsp=UTF-8
 encoding//config/appconfig.properties=UTF-8
-encoding//db/url_function.sql=UTF-8
+encoding//config/urlcheckjar.properties=UTF-8
 encoding//src/com/mgang/util/prop/PropAppConfig.java=UTF-8
 encoding/<project>=UTF-8

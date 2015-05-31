@@ -97,10 +97,10 @@ $(function(){
 			<c:if test="${mg:check(loginUser,'bclient/user/addAdmin.jsp') }">
 				<li><a href="${pageContext.request.contextPath}/bclient/user/addAdmin.jsp" target="main"><i class="cus-user_add"></i>新增管理员　　</a></li>
 			</c:if>
-			<c:if test="${mg:check(loginUser,'admin.do?action=listUser&type=user') }">
+			<c:if test="${mg:check(loginUser,'admin.do?listUser&user') }">
 				<li><a href="${pageContext.request.contextPath}/admin.do?action=listUser&type=user" target="main"><i class="cus-group"></i>查看会员列表　</a></li>
 			</c:if>
-			<c:if test="${mg:check(loginUser,'admin.do?action=listUser&type=admin') }">
+			<c:if test="${mg:check(loginUser,'admin.do?listUser&admin') }">
 				<li><a href="${pageContext.request.contextPath}/admin.do?action=listUser&type=admin" target="main"><i class="cus-group"></i>查看管理员列表</a></li>
 			</c:if>
 		</ul>
@@ -109,7 +109,7 @@ $(function(){
 			<c:if test="${mg:check(loginUser,'bclient/user/addRole.jsp') }">
 				<li><a href="${pageContext.request.contextPath}/bclient/user/addRole.jsp" target="main"><i class="cus-group_add"></i>添加角色　　　</a></li>
 			</c:if>
-			<c:if test="${mg:check(loginUser,'role.do?action=listRole') }">
+			<c:if test="${mg:check(loginUser,'role.do?listRole') }">
 				<li><a href="${pageContext.request.contextPath}/role.do?action=listRole" target="main"><i class="cus-group_gear"></i>查看角色列表　</a></li>
 			</c:if>
 		</ul>
@@ -118,7 +118,7 @@ $(function(){
 			<c:if test="${mg:check(loginUser,'bclient/user/addFun.jsp') }">
 				<li><a href="${pageContext.request.contextPath}/bclient/user/addFun.jsp" target="main"><i class="cus-lock_add"></i>添加权限　　　</a></li>
 			</c:if>
-			<c:if test="${mg:check(loginUser,'function.do?action=listFunction') }">
+			<c:if test="${mg:check(loginUser,'function.do?listFunction') }">
 				<li><a href="${pageContext.request.contextPath}/function.do?action=listFunction" target="main"><i class="cus-group_key"></i>查看权限列表　</a></li>
 			</c:if>
 		</ul>

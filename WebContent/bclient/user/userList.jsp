@@ -32,16 +32,16 @@
 		    	<c:forEach items="${page.list }" var="u">
 		    		<tr>
 						<td>
-			    			<c:if test="${mg:check(loginUser,'admin.do?action=toChangeUserUI&userId&type') }">
+			    			<c:if test="${mg:check(loginUser,'admin.do?toChangeUserUI&userId&type') }">
 			    				<a title="变更用户角色" href="${pageContext.request.contextPath}/admin.do?action=toChangeUserUI&userId=${u.userId}&type=user" onclick="return confirm('您真的要变更该用户角色吗？')"><i class="cus-group_edit"></i></a>
 			    			</c:if>
 			    			<c:if test="${u.status eq 1 }">
-			    				<c:if test="${mg:check(loginUser,'admin.do?action=stopUser&userId') }">
+			    				<c:if test="${mg:check(loginUser,'admin.do?stopUser&userId') }">
 			    					<a title="屏蔽用户" href="${pageContext.request.contextPath}/admin.do?action=stopUser&userId=${u.userId}" onclick="return confirm('您真的要屏蔽该用户吗？');"><i class="cus-user_delete"></i></a>
 			    				</c:if>
 			    			</c:if>
 			    			<c:if test="${u.status eq 0 }">
-			    				<c:if test="${mg:check(loginUser,'admin.do?action=activeUser&userId') }">
+			    				<c:if test="${mg:check(loginUser,'admin.do?activeUser&userId') }">
 			    					<a title="解锁用户" href="${pageContext.request.contextPath}/admin.do?action=activeUser&userId=${u.userId}" onclick="return confirm('您真的要解锁该用户吗？');"><i class="cus-user_go"></i></a>
 			    				</c:if>　
 			    			</c:if>

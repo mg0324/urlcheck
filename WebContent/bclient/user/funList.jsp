@@ -25,11 +25,11 @@
 		    	<c:forEach items="${page.list }" var="fun">
 		    		<tr>
 		    			<td>
-				    		<c:if test="${mg:check(loginUser,'function.do?action=toUpdateFunctionUI&funId') }">
+				    		<c:if test="${mg:check(loginUser,'function.do?toUpdateFunctionUI&funId') }">
 				    			<a title="修改权限" href="${pageContext.request.contextPath}/function.do?action=toUpdateFunctionUI&funId=${fun.funId}"
 				    			 onclick="return confirm('您真的要修改该权限吗？')"><i class="cus-lock_edit"></i></a>
 				    		</c:if>
-				    		<c:if test="${mg:check(loginUser,'function.do?action=deleteFunction&funId') }">
+				    		<c:if test="${mg:check(loginUser,'function.do?deleteFunction&funId') }">
 				    			<a title="删除权限" href="${pageContext.request.contextPath}/function.do?action=deleteFunction&funId=${fun.funId}" onclick="return confirm('您真的要删除该权限吗？');"><i class="cus-lock_delete"></i></a>
 				    		</c:if>
 			    		</td>

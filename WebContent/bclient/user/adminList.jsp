@@ -31,17 +31,17 @@
 		    	<c:forEach items="${page.list }" var="u">
 		    		<tr>
 		    			<td>
-		    				<c:if test="${mg:check(loginUser,'admin.do?action=toChangeUserUI&userId&admin') }">
+		    				<c:if test="${mg:check(loginUser,'admin.do?toChangeUserUI&userId&admin') }">
 				    			<a title="变更用户角色" href="${pageContext.request.contextPath}/admin.do?action=toChangeUserUI&userId=${u.userId}&type=admin" onclick="return confirm('您真的要变更该管理员角色吗？')"><i class="cus-group_edit"></i></a>
 				    		</c:if>
 			    			<c:if test="${u.userType != 1 }">
 			    				<c:if test="${u.status eq 1 }">
-			    					<c:if test="${mg:check(loginUser,'admin.do?action=stopAdmin&userId') }">
+			    					<c:if test="${mg:check(loginUser,'admin.do?stopAdmin&userId') }">
 			    						<a title="禁用管理员" href="${pageContext.request.contextPath}/admin.do?action=stopAdmin&userId=${u.userId}" onclick="return confirm('您真的要禁用该管理员吗？');"><i class="cus-user_delete"></i></a>
 			    					</c:if>
 			    				</c:if>
 			    				<c:if test="${u.status eq 0 }">
-			    					<c:if test="${mg:check(loginUser,'admin.do?action=activeAdmin&userId') }">
+			    					<c:if test="${mg:check(loginUser,'admin.do?activeAdmin&userId') }">
 			    						<a title="解锁管理员" href="${pageContext.request.contextPath}/admin.do?action=activeAdmin&userId=${u.userId}" onclick="return confirm('您真的要解锁该管理员吗？');"><i class="cus-user_go"></i></a>
 			    					</c:if>
 			    				</c:if>

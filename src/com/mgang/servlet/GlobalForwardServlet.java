@@ -7,9 +7,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.mgang.urlcheck.core.CheckFunctionTag;
+
 import com.mgang.service.imp.UserService;
 import com.mgang.service.inter.IUser;
-import com.mgang.tag.CheckFunctionTag;
 import com.mgang.util.LogUtil;
 import com.mgang.util.MD5;
 import com.mgang.util.ValidateCode;
@@ -72,7 +73,8 @@ public class GlobalForwardServlet extends FrameworkServlet{
 			if(null != u){
 				//该用户是数据库中的存在用户
 				//匹配用户有没有后台登陆权限
-				boolean haveFun = CheckFunctionTag.checkFunctionByUser(u,REQUEST_URL);
+				String login_url = PropAppConfig.get("login_url");
+				boolean haveFun = CheckFunctionTag.checkFunctionByUser(u,login_url);
 				if(haveFun){
 					//有后台登陆权限
 					//该用户是否是管理员级别
