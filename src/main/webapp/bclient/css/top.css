@@ -1,0 +1,75 @@
+body { padding:0px; margin:0px; }
+#tpa {
+	color: #009933;
+	margin:0px;
+	padding:0px;
+	float:right;
+	padding-right:10px;
+}
+
+#tpa dd {
+	margin:0px;
+	padding:0px;
+	float:left;
+	margin-right:2px;
+}
+
+#tpa dd.ditem {
+	margin-right:8px;
+}
+
+#tpa dd.img {
+  padding-top:6px;
+}
+
+#tpa .item{
+	width:82px;
+	height:26px;
+	line-height:28px;
+	background-color:#29D33B;
+	border:1px solid #ffffdd;
+	border-bottom:none;
+	text-align:center;
+	color:white;
+	font-weight: bold;
+	border-radius:6px 6px 0px 0px;
+}
+.item a{
+	color:white;
+	text-decoration: none;
+}
+.item a:hover{
+	color:#2694D3;
+}
+.itemsel {
+  	width:80px;
+  	text-align:center;
+  	background:white;
+  	border-radius:6px 6px 0px 0px;
+	height:26px;
+	line-height:28px;
+	border:1px solid #29D33B;
+	border-bottom: 1px solid #ffffff;
+}
+.itemsel a{
+	text-decoration: none;
+}
+*html .itemsel {
+	height:26px;
+	line-height:26px;
+}
+#topLink{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	
+}
+#topLink a{
+	text-decoration: none;
+	font-size: 14px;
+}
+#topBg{
+	background: url("../image/topbg.png") repeat-x top;
+}
+
+
